@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Yaniv Hassidof</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<style>
+h2, h3, h4{
+  text-decoration: underline;
+}
+h1{
+  text-align: center;
+  color: #00bbff;
+}
+body, html {
+    height: 100%;
+}
+
+.parallax { 
+    background-image: url("img/back.jpg");
+    height: 200%; 
+    padding: 30px;
+    padding-top: 100px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container{
+  z-index: 1;
+  padding: 20px;
+  width: 70%; 
+  color: white;
+  float: center;
+  position: relative;
+  background-image: url("img/black1.jpg");
+  
+}
+.cont{
+  border-right: double white 2px;
+  padding-right: 30px;
+}
+.cont2{
+  margin-top: 10px;
+}
+.img-circle{
+  z-index: 2;
+  margin-bottom: 0;
+  margin-left: 70px;
+  opacity: 1;
+  height: 160px;
+  width: 150px;
+border: 6px  solid #00bbff;
+}
+
+
+#ref{
+  margin-top: 30px;
+}
+#contact{
+  height: 0;
+  overflow: hidden;
+  transition-duration: 1s;
+  transition-delay: 0;
+ 
+}
+#contact ul{
+   list-style-type: none;
+}
+#phone{
+  margin-top: 10px;
+  padding: 3px;
+}
+#LFM{
+  color: #00bbff;
+}
+@media only screen and (max-width: 500px) {
+ 
+.container{
+  margin-right: 0;
+  margin-left: 0;
+}
+.parallax{ 
+    
+    
+    padding: 0;
+    padding-top:70px;
+    padding-right: 0;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200%; 
+}
+
+}
+
+</style>
+<script>
+function deploy() {
+    document.getElementById("contact").style.height = "190px";
+  }
+
+  function hide() {
+    document.getElementById("contact").style.height = "2px";
+  }
+  setInterval(hide(), 2000);
+</script>
+<body>
+
+<div class="parallax">
+
+<div class="container ">
+   <div id="main" class="col-sm-12 col-md-8">
+
+     <div class="cont"  >
+            <h2>Employment</h2>
+            <p></p>
+            <p>
+              More than 2 years in a small development team. My main project and our flagship product being the Self - Reception Hotel Kiosk, my job involves web and desktop applications with integration to external APIs and Hardware. Our Website:
+              berger-sisters.co.il 
+              </p>
+              <h2>Education</h2>
+              <h3>2011 - 2014 - High School</h2>
+            <ul>
+                <li>Full High School Diploma with specialization in computers and physics</li>
+                <li>Studied in the "Ort-Technion" program, enjoying <br>special access to
+                     Technion institutions and classes</li>
+                <li>85 Average</li>
+                <li>Computer Science and Physics</li>
+            </ul>
+            <h2>2015 - 2018 - Military Service</h2>
+             <ul>
+                <li>6 Months in Pilot Academy, including Ben Gurion  Uni. classes
+                </li>
+                <li>2 and 1/2 Years as Hydraulics Technician</li>
+                <li>Open University intro to CS Course</li>
+                <li>Android and Web applications development course</li>
+            </ul>
+            <h2>2018 - Present - Academic studies</h2>
+            <ul>
+                <li>Technion preparatory school</li>
+                <li>Android apps and Web developement at Intellect Akademon College in Israel</li>
+            </ul>
+          </div>
+
+  
+</div> 
+
+  <div id="main" class="col-sm-12 col-md-4" onmouseover="deploy()" onmouseout="hide()">
+    <h1>Yaniv Hassidof</h1>
+    <div id="profile"><img   src="img/profile.jpg" alt="Profile Picture" class="img-circle">
+      
+    </div>
+    <div id="contact" class="cont2" >
+        <h3 id="LFM">Look for Me!</h3>
+        <a href="https://www.facebook.com/yaniv.hassidof"><img src="img/f.png" class="img-rounded"></a>
+        <a href="https://www.gmail.com"><img src="img/g.png" class="img-rounded"></a>
+        <a href="https://goo.gl/maps/JiZdfYHTeRt"><img src="img/gm.png" class="img-rounded" style="width:65px;height:65px;"></a>
+        <div id="phone"><img src="img/p.png" class="img-rounded" style="margin-right: 3px;">054-8306800</div>
+        
+        
+    </div>
+    <div class="cont2" >
+With great passion for computers, I've been tinkering with machines since I was litte.</div>
+
+<div class="cont2">
+  A fun, social and a very hard working individual, I take every
+  task with the outmost seriousness. 
+</div> 
+
+
+</div>
+
+
+
+
+
+
+
+
+
+</div>
+
+</body>
+</html>
