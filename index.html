@@ -1,213 +1,227 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Yaniv Hassidof</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <meta charset="UTF-8">
+  <title>Yaniv Hassidof - Robotics & AI Researcher</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <!-- Bootstrap 4.6 CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.6.0/css/bootstrap.min.css">
+  <style>
+    /* Global Styles */
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      scroll-behavior: smooth;
+      background: #f4f4f4;
+      color: #333;
+    }
+    a { color: #00bbff; }
+
+    /* Parallax Section */
+    .parallax {
+      background-image: url("img/back.jpg");
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 100px 20px;
+    }
+
+    /* Content Container */
+    .content-container {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 40px;
+      border-radius: 8px;
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-gap: 40px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    /* Profile Section */
+    .profile {
+      grid-column: 1 / -1;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .profile-img {
+      border-radius: 50%;
+      border: 6px solid #00bbff;
+      width: 150px;
+      height: 150px;
+      margin: auto;
+      transition: transform 0.3s;
+    }
+    .profile-img:hover {
+      transform: scale(1.05);
+    }
+    .profile h1 {
+      margin-top: 15px;
+      color: #00bbff;
+    }
+    .profile .lead {
+      margin-bottom: 20px;
+    }
+    /* Inline contact info under name */
+    .contact-inline {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+    .contact-inline a {
+      font-size: 1.3rem;
+      transition: color 0.3s;
+    }
+    .contact-inline a:hover {
+      color: #0077aa;
+    }
+    .contact-inline .phone-number {
+      font-size: 1rem;
+      color: #333;
+    }
+
+    /* Section Titles */
+    .section-title {
+      font-size: 1.8rem;
+      border-bottom: 2px solid #00bbff;
+      padding-bottom: 5px;
+      margin-bottom: 15px;
+    }
+
+    /* Smooth Animations */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 0.8s forwards;
+    }
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
 </head>
-
-<style>
-h2, h3, h4{
-  text-decoration: underline;
-}
-h1{
-  text-align: center;
-  color: #00bbff;
-}
-body, html {
-    height: 100%;
-}
-
-.parallax { 
-    background-image: url("img/back.jpg");
-    height: 200%; 
-    padding: 30px;
-    padding-top: 100px;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.container{
-  z-index: 1;
-  padding: 20px;
-  width: 70%; 
-  color: white;
-  float: center;
-  position: relative;
-  background-image: url("img/black1.jpg");
-  
-}
-.cont{
-  border-right: double white 2px;
-  padding-right: 30px;
-}
-.cont2{
-  margin-top: 10px;
-}
-.img-circle{
-  z-index: 2;
-  margin-bottom: 0;
-  margin-left: 70px;
-  opacity: 1;
-  height: 160px;
-  width: 150px;
-border: 6px  solid #00bbff;
-}
-
-
-#ref{
-  margin-top: 30px;
-}
-#contact{
-  height: 0;
-  overflow: hidden;
-  transition-duration: 1s;
-  transition-delay: 0;
- 
-}
-#contact ul{
-   list-style-type: none;
-}
-#phone{
-  margin-top: 10px;
-  padding: 3px;
-}
-#LFM{
-  color: #00bbff;
-}
-@media only screen and (max-width: 500px) {
- 
-.container{
-  margin-right: 0;
-  margin-left: 0;
-}
-.parallax{ 
-    
-    
-    padding: 0;
-    padding-top:70px;
-    padding-right: 0;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 200%; 
-}
-
-}
-
-</style>
-<script>
-function deploy() {
-    document.getElementById("contact").style.height = "190px";
-  }
-
-  function hide() {
-    document.getElementById("contact").style.height = "20px";
-  }
-  setInterval(hide(), 2000);
-</script>
 <body>
-
-<div class="parallax">
-
-<div class="container ">
-   <div id="main" class="col-sm-12 col-md-8">
-
-     <div class="cont"  >
-            <h2>Employment</h2>
-            <p></p>
-			<h2>2020 - Present: Navigation Algorithms Engineer at Rafael</h2>
-            <ul>
-                <li>Crafting Deep Learning, Reinforcement Learning, Path Planning, and Localization algorithms</li>
-                <li>Efficient implementation to meet time\memory constraints. High reliability and robustness to whistand real world conditions.</li>
-                <li>Constant self studying of state-of-the-art papers and technologies</li>
-                <li>Quickly adapting to new domains and technologies</li>
-            </ul>
-			
-            <h2>2018 - 2020: Software Developer at Self Reception ltd.</h2>
-            <ul>
-                <li>Full project development from customer design to delivery of the final product</li>
-                <li>Customer success - maintenance, implementing new features, adoption of new technologies</li>
-                <li>My main project and our flagship product was the <a href="https://www.youtube.com/watch?v=heZDabBnSxw&t=1s">Self Reception Hotel Kiosk</a> </li>
-            </ul>
-			
-			  
-			  <h2>Education</h2>
-            
-                <li>Technion Comp. Engineering student (2019 - Present, est grad. 2023) </li>
-				<li>Android and Web applications development bootcamp</li>
-                <li>Constant online learning from courses, blogs and papers</li>
-				
-            
-			
-			  <h2>2011 - 2014 - High School</h2>
-            <ul>
-                <li>Full High School Diploma with specialization in computers and physics</li>
-                <li>Studied in the "Ort-Technion" program, enjoying <br>special access to
-                     Technion institutions and classes</li>
-            </ul>
-			
-			<h2>2015 - 2018 - Military Service</h2>
-             <ul>
-                <li>6 Months in Pilot Academy, including Ben Gurion  Uni. classes
-                </li>
-                <li>2 and 1/2 Years as Hydraulics Technician</li>
-                
-            </ul>
-			
-          
-          <div>
-          <h2>Favorite Projects:</h2>
-          <h3>Multiple Drone Delivery Project using Vision and Planning algorithms</h3>
-          
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/eHOZkn-UB9k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          <h3>Graph Neural Networks Rewiring using RL</h3>
-          Oversquashing is a phenomenon in graph neural networks where information from too many nodes is condensed to a single vector, harming the network’s predictions. 
-          The phenomenon is widespread in large networks where over the multiple layers of the GNN information from an exponential amount of nodes is condensed to the constant sized node embedding. It is shown that even simple solutions such as making the last layer of the GNN fully adjacent (adding all possible edges in the graph) improves task accuracy by up to 40%.
-          The goal of this project is to find and compare methods of graph rewiring to improve learning. Our algorithms will learn how to modify edges in such a way that will maximize performance across several tasks.
-          Our code is available here: Github.com/vYahav/GraphRewiring
-
+  <!-- Parallax Section -->
+  <div class="parallax">
+    <div class="content-container fade-in">
+      <!-- Profile Section -->
+      <section id="profile" class="profile">
+        <img src="img/profile.jpg" alt="Profile Picture" class="profile-img">
+        <h1>Yaniv Hassidof</h1>
+        <p class="lead">Robotics and AI Researcher with 6+ years of experience 
+		Proven track record as lead developer on high profile products
+		And in leading integration of deep learning into high stakes robotic systems 
+		Passionate about leveraging my skills towards new technological advancements</p>
+        <!-- Inline Contact Info -->
+        <div class="contact-inline">
+          <a href="mailto:yaniv_hass@campus.technion.ac.il" title="Email"><i class="fas fa-envelope"></i></a>
+          <a href="https://www.linkedin.com/in/yourprofile" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/yanivhass" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://goo.gl/maps/JiZdfYHTeRt" target="_blank" title="Location"><i class="fas fa-map-marker-alt"></i></a>
+          <span class="phone-number">Phone: 054-8306800</span>
         </div>
+      </section>
+
+      <!-- Employment Section -->
+      <section id="employment" class="fade-in">
+        <h2 class="section-title">Employment</h2>
+        <h3>2024 - Present: Teaching Assistant at Technion</h3>
+        <ul>
+          <li>Teaching courses in Reinforcement Learning, Mobile Robots, and Computer Networks</li>
+          <li>
+            Supervised projects such as 
+            <a href="https://www.youtube.com/@IOT_Technion_Team10/videos" target="_blank">
+              vision-impaired collision warning
+            </a>, LLM RAG teaching-assistant, and more
+          </li>
+        </ul>
+        <h3>2020 - 2024: Navigation Algorithms Engineer at Rafael</h3>
+        <ul>
+          <li>
+            Taken full responsibility of the navigation stack for multiple high-profile Rafael systems, 
+            from localization and mapping to planning under uncertainty
+          </li>
+          <li>
+            Single-handedly crafted POCs that proved superior to alternatives from across the company
+          </li>
+          <li>
+            Led the department-wide adoption of Deep Learning, assisting dozens of projects 
+            and resulting in significant performance improvements in signal processing, 
+            state estimation, simulation, etc.
+          </li>
+        </ul>
+        <h3>2018 - 2020: Software Developer at Self Reception Ltd</h3>
+        <ul>
+          <li>Managed full-cycle project development for the Self Reception Hotel Kiosk</li>
+          <li>Ensured customer success with continuous improvements and on-site support</li>
+        </ul>
+      </section>
+
+      <!-- Education Section -->
+      <section id="education" class="fade-in">
+        <h2 class="section-title">Education</h2>
+        <h3>2024 - Present: MSc./PhD in Electrical Engineering, Technion</h3>
+        <ul>
+          <li>
+            Thesis: Developing a novel Diffusion Models-based Tree Search algorithm for safe, 
+            real-time, and agile robotic motion planning in complex, uncertain environments.
+          </li>
+          <li>
+            Researching Physics-Informed Neural Networks (PINNs) to enhance the accuracy of real-world 
+            robotic simulations, bridging the gap between physics-based modeling and deep learning.
+          </li>
+        </ul>
+
+        <h3>2019 - 2023: BSc. in Computer Engineering, Technion</h3>
+        <ul>
+          <li>Specialized in Deep Learning and Quantum Computing</li>
+          <li>Extracurricular courses from MIT and Stanford</li>
+          <li>Featured on the Dean’s Excellence list twice</li>
+        </ul>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects" class="fade-in">
+        <h2 class="section-title">Projects</h2>
+        <h3>Drone Delivery Project</h3>
+        <p>Developed vision and planning algorithms for multiple drone delivery systems.</p>
+        <div class="embed-responsive embed-responsive-16by9 mb-3">
+          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/eHOZkn-UB9k" allowfullscreen></iframe>
         </div>
-</div> 
+        <h3>Missile-Command</h3>
+        <p>
+          Evaluating Reinforcement Learning (RL) algorithms 
+          within the context of a multi-agent competitive scenario. Implemented 
+          in a mini strategy game as a testbed for multi-agent RL. 
+          Assessed the efficacy, adaptability, and strategic depth 
+          of various RL algorithms in decision making, cooperation, and competition in a simulated setting.
+          <br>
+          <a href="https://github.com/Yanivhass/Missile-Command" target="_blank">View Code on GitHub</a>
+        </p>
+        <h3>Graph Neural Networks Rewiring using RL</h3>
+        <p>
+          Addressed the oversquashing phenomenon in GNNs by learning optimal edge modifications. 
+          <a href="https://github.com/vYahav/GraphRewiring" target="_blank">View Code on GitHub</a>
+        </p>
 
-  <div id="main" class="col-sm-12 col-md-4" onmouseover="deploy()" onmouseout="hide()">
-    <h1>Yaniv Hassidof</h1>
-    <div id="profile"><img   src="img/profile.jpg" alt="Profile Picture" class="img-circle">
-      
+
+      </section>
     </div>
-    <div id="contact" class="cont2" >
-        <h3 id="LFM">Look for Me!</h3>
-        <a href="https://www.facebook.com/yaniv.hassidof"><img src="img/f.png" class="img-rounded"></a>
-        <a href="https://www.gmail.com"><img src="img/g.png" class="img-rounded"></a>
-        <a href="https://goo.gl/maps/JiZdfYHTeRt"><img src="img/gm.png" class="img-rounded" style="width:65px;height:65px;"></a>
-        <div id="phone"><img src="img/p.png" class="img-rounded" style="margin-right: 3px;">054-8306800</div>
-        
-        
-    </div>
-    <div class="cont2" >
-With great passion for computers, I've been tinkering with machines since I was litte.</div>
+  </div>
 
-<div class="cont2">
-  A fun, social and a very hard working individual, I take every
-  task with the outmost seriousness. 
-</div> 
-
-</div>
-
-
-
-
-
-
-
-
-
-</div>
-
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
